@@ -1,0 +1,25 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "MostraNuova";
+  font-style: normal;
+  font-weight: 700;
+  src: local("MostraNuova-Bold"), url("../fonts/MostraNuova-Bold.otf") format("otf");
+}
+@font-face {
+  font-family: "SerifGothicStd";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SerifGothicStd-Bold"), url("../fonts/SerifGothicStd-Bold.otf") format("otf");
+}
+.afterland h2 {
+  font-family: "MostraNuova", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

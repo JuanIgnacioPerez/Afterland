@@ -1,0 +1,1 @@
+console.log('%c Rock & Roll! ', 'background: #222; color: #bada55; font-size: 26px');
