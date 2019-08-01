@@ -26,14 +26,101 @@
     />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
+
   <body>
     <div class="afterland">
       <!-- Header -->
-      <header></header>
+      <header>
+        <nav class="afterland__navbar">
+          <div class="container">
+            <div class="afterland__navbox">
+              <div class="afterland__logo">
+                <a href="#">
+                  <img src="img/logo.png" alt="logo" />
+                </a>
+              </div>
+
+              <div class="afterland__menu" id="navbarResponsive">
+                <ul class="afterland__list">
+                  <li class="afterland__item">
+                    <a href="#">Historia</a>
+                  </li>
+                  <li class="afterland__item">
+                    <a href="#">Centro de entrenamiento</a>
+                  </li>
+                  <li class="afterland__item">
+                    <a href="#">Servicios</a>
+                  </li>
+                  <li class="afterland__item">
+                    <a href="#">Seguridad</a>
+                  </li>
+                  <li class="afterland__item">
+                    <a href="#">contáctanos</a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="afterland__responsive"
+                data-toggle="collapse"
+                data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <input type="checkbox" id="lanzador" />
+                <label for="lanzador">
+                  <span class="afterland__responsive--linea"></span>
+                  <span class="afterland__responsive--linea"></span>
+                  <span class="afterland__responsive--linea"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
       <!-- End Header -->
-      <section>
-        <h2>Hola Mundo!</h2>
+      <!-- Banner -->
+      <section class="afterland__hero">
+        <div class="afterland__banner">
+          <picture>
+            <img
+              class="afterland__banner--galaxy"
+              src="./img/galaxy.png"
+              alt="galaxy"
+            />
+          </picture>
+          <div class="container">
+            <div class="afterland__bannerBox">
+              <div class="afterland__caption">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="afterland__captionInfo">
+                      <img
+                        class="afterland__caption--force"
+                        src="./img/eliteForce.png"
+                        alt="force"
+                      />
+                      <button class="afterland__knowBtn">
+                        Conoce la </br> historia
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="afterland__infoPlay">
+                      <img
+                        class="afterland__caption--play"
+                        src="./img/play.png"
+                        alt="play"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+      <!-- End Banner -->
       <!-- Footer -->
       <footer></footer>
       <!-- End Footer -->

@@ -1,6 +1,6 @@
 # Afterland
 
-Parque temático
+Theme park 🚀
 
 ## Prerequisites
 Follow the instructions to download this repository and run it locally.

@@ -3,8 +3,248 @@
 
 .afterland {
 
-  h2 {
-    font-family: $mostra-font;
+  /*header*/
+  &__navbar {
+    width: 100%;
+    position: fixed;
+    padding: 10px 0;
+    background-color: transparent;
+    z-index: 99;
   }
-  
+
+  &__navbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  &__logo {
+    padding: 0 10px;
+
+    img {
+      width: 60%;
+    }
+  }
+
+  &__menu {
+    &:not(.show) {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 5px;
+
+    a {
+      font-family: $serif-font;
+      color: $base-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      text-shadow: 0 0 0 transparent, 0 0 0 transparent;
+
+      &:hover {
+        color: $base-red;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 0 0 2px $base-red, 0 0 2px $base-white;
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    text-align: right;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    display: grid;
+    padding: 10px 30px;
+    z-index: 9999;
+  }
+
+  &__responsive {
+    width: 30px;
+    height: 20px;
+    padding: 0;
+
+    #lanzador {
+      position: absolute;
+      left: -9999px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    &--linea {
+      height: 3px;
+      background-color: #fff;
+      transform: translateY(0) rotate(0);
+      transition: all 0.3s;
+      box-shadow: 0 0 4px $base-red, 0 0 4px $base-white;
+    }
+
+    #lanzador:checked~label &--linea {
+      &:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+
+  /*banner*/
+  &__banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &--galaxy {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__bannerBox {
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 100%;
+    padding: 50px 0 0;
+  }
+
+  &__caption {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+    &--force {
+      width: 50%;
+    }
+
+    &--play {
+      width: 40%;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__captionInfo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__infoPlay {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__knowBtn {
+    -webkit-clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+    clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+    padding: 5px 10px;
+    background: $base-red;
+    color: $base-white;
+    border: 0;
+    text-align: center;
+    line-height: 1;
+    font-family: $main-font;
+    font-weight: bold;
+    font-size: 7px;
+    text-transform: uppercase;
+    margin: 5px 0 0;
+
+    &:hover {
+      background: rgba($base-red, 0.8);
+      opacity: 0.9;
+    }
+  }
+
+  /* media */
+  @media (min-width: 768px) {
+    &__list {
+      display: block;
+      position: unset;
+      padding: 10px 0;
+      top: 80px;
+    }
+
+    &__item {
+      a {
+        font-size: 10px;
+      }
+    }
+
+    &__menu {
+      text-align: right;
+
+      &:not(.show) {
+        display: flex;
+      }
+    }
+
+    &__responsive {
+      display: none;
+    }
+
+    &__bannerBox {
+      width: 80%;
+      padding: 30px 0;
+    }
+
+    &__banner {
+      &--galaxy {
+        height: 80%;
+      }
+    }
+
+    &__caption {
+      &--force {
+        width: 80%;
+      }
+
+      &--play {
+        width: 50%;
+      }
+    }
+
+    &__knowBtn {
+      padding: 10px 30px;
+      font-size: 13px;
+      margin: 10px 0 0;
+    }
+
+    &__logo {
+      img {
+        width: unset;
+      }
+    }
+  }
+
 }
