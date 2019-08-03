@@ -13,22 +13,38 @@ ol {
   src: local("MostraNuova-Bold"), url("../fonts/MostraNuova-Bold.otf") format("otf");
 }
 @font-face {
-  font-family: "SerifGothicStd";
+  font-family: "ITC Serif Gothic Light";
   font-style: normal;
-  font-weight: 700;
-  src: local("SerifGothicStd-Bold"), url("../fonts/SerifGothicStd-Bold.otf") format("otf");
+  font-weight: normal;
+  src: local("ITC Serif Gothic Light"), url("../fonts/ITCSerifGothic/itc-serif-gothic-light.woff") format("woff");
+}
+@font-face {
+  font-family: "ITC Serif Gothic Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ITC Serif Gothic Regular"), url("../fonts/ITCSerifGothic/itc-serif-gothic-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "ITC Serif Gothic Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ITC Serif Gothic Extra Bold"), url("../fonts/ITCSerifGothic/itc-serif-gothic-extra-bold.woff") format("woff");
 }
 .afterland {
   /*header*/
   /*banner*/
+  /* training */
   /* media */
+  /* footer */
+  /* resize */
 }
 .afterland__navbar {
   width: 100%;
-  position: fixed;
+  position: relative;
   padding: 10px 0;
   background-color: transparent;
   z-index: 99;
+  background: #1e1d20;
 }
 .afterland__navbox {
   display: flex;
@@ -40,7 +56,7 @@ ol {
   padding: 0 10px;
 }
 .afterland__logo img {
-  width: 60%;
+  width: 70%;
 }
 .afterland__menu:not(.show) {
   display: none;
@@ -52,7 +68,7 @@ ol {
   padding: 0 5px;
 }
 .afterland__item a {
-  font-family: "SerifGothicStd", sans-serif;
+  font-family: "ITC Serif Gothic Regular";
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -68,12 +84,14 @@ ol {
 .afterland__list {
   position: absolute;
   text-align: right;
-  top: 50px;
+  top: 60px;
   width: 100%;
   left: 0;
   display: grid;
   padding: 10px 30px;
   z-index: 9999;
+  background: rgba(23, 22, 24, 0.7);
+  transition: all 3s ease-in;
 }
 .afterland__responsive {
   width: 30px;
@@ -122,7 +140,6 @@ ol {
   top: 0;
   display: flex;
   height: 100%;
-  padding: 50px 0 0;
 }
 .afterland__caption {
   display: inline-flex;
@@ -173,15 +190,282 @@ ol {
   background: rgba(255, 12, 87, 0.8);
   opacity: 0.9;
 }
+.afterland__knowBtn:focus {
+  outline: none;
+}
 @media (min-width: 768px) {
+  .afterland__knowBtn {
+    padding: 10px 30px;
+    font-size: 13px;
+    margin: 10px 0 0;
+  }
+}
+.afterland__training {
+  width: 100%;
+  padding: 40px 0;
+  background: #1e1d20;
+  display: flex;
+  align-items: center;
+}
+.afterland__card {
+  background: #171618;
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  max-width: 300px;
+  margin: 50px auto 0;
+}
+.afterland__cardImage {
+  width: 100%;
+}
+.afterland__cardInfo {
+  padding: 20px;
+  min-height: 100px;
+}
+.afterland__cardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+.afterland__cardText {
+  font-size: 10px;
+  font-weight: 300;
+}
+.afterland__cardHeading {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.afterland__cardHeading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 80%;
+  height: 50%;
+  border-top: 1px solid #ff0c57;
+  z-index: 20;
+}
+.afterland__cardHeading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  right: 20px;
+  height: 50%;
+  border-top: 1px solid #ff0c57;
+  z-index: 20;
+}
+.afterland__headingName {
+  font-family: "ITC Serif Gothic Extra Bold";
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+}
+.afterland__cardBottom {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.afterland__cardButton {
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  padding: 5px 10px;
+  background: #ff0c57;
+  color: #ffffff;
+  border: 0;
+  text-align: center;
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 7px;
+  text-transform: uppercase;
+  margin: 5px 0 0;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.afterland__cardButton:hover {
+  background: rgba(255, 12, 87, 0.8);
+  opacity: 0.9;
+}
+.afterland__cardButton:focus {
+  outline: none;
+}
+@media (min-width: 768px) {
+  .afterland__cardButton {
+    padding: 10px 30px;
+    font-size: 13px;
+    margin: 10px 0 0;
+  }
+}
+.afterland__tagWrap {
+  filter: drop-shadow(0px 0px 16px rgba(255, 12, 87, 0.6));
+}
+.afterland__mediaBox {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.afterland__mediaVideo {
+  width: 100%;
+}
+.afterland__footer {
+  background: linear-gradient(to bottom right, #1e1d20, #12121b);
+}
+.afterland__footerSection {
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+.afterland__footerSection--schedule {
+  padding: 0 0 0 10px;
+}
+.afterland__footerBox {
+  padding: 50px 0 20px;
+}
+.afterland__footerForm {
+  font-family: "Rubik", sans-serif;
+}
+.afterland__footerInput {
+  width: 100%;
+  font-size: 13px;
+  border: none;
+  background: #29292b;
+  color: #ffffff;
+  padding: 10px 16px;
+  margin: 5px 0;
+  font-weight: 300;
+}
+.afterland__footerInput:focus {
+  outline: none;
+  background: rgba(41, 41, 43, 0.8);
+  transition: all 0.3s ease-in;
+}
+.afterland__footerInput::placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.afterland__footerTitle {
+  font-size: 32px;
+  font-family: "ITC Serif Gothic Extra Bold";
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+.afterland__footerTitle--media {
+  letter-spacing: 7px;
+}
+.afterland__footerBtn {
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  padding: 5px 10px;
+  background: #ff0c57;
+  color: #ffffff;
+  border: 0;
+  text-align: center;
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 7px;
+  text-transform: uppercase;
+  margin: 5px 0 0;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.afterland__footerBtn:hover {
+  background: rgba(255, 12, 87, 0.8);
+  opacity: 0.9;
+}
+.afterland__footerBtn:focus {
+  outline: none;
+}
+@media (min-width: 768px) {
+  .afterland__footerBtn {
+    padding: 10px 30px;
+    font-size: 13px;
+    margin: 10px 0 0;
+  }
+}
+.afterland__footerInfo {
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  margin: 20px 0 0;
+}
+.afterland__footerInfo--box {
+  padding: 10px 20px 10px 0;
+}
+.afterland__footerInfo--boxDates {
+  margin-top: 30px;
+  width: fit-content;
+}
+.afterland__footerInfo--text {
+  opacity: 0.8;
+  line-height: 1;
+  margin: 0;
+}
+.afterland__footerInfo--location {
+  margin: 0 0 5px 0;
+}
+.afterland__footerInfo--phone {
+  position: relative;
+  top: 2px;
+  opacity: 0.8;
+}
+.afterland__footerInfo--location {
+  opacity: 0.8;
+}
+.afterland__footerInfo--link {
+  color: #ffffff;
+}
+.afterland__footerInfo--link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+.afterland__footerHeading {
+  padding-top: 40px;
+}
+.afterland__footerSocial {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px 0 0;
+  margin-bottom: 50px;
+}
+.afterland__footerIcon i {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 28px;
+}
+.afterland__footerIcon i:hover {
+  color: rgba(255, 12, 87, 0.8);
+  transition: all 0.2s ease-in;
+}
+@media (min-width: 768px) {
+  .afterland__navbar {
+    position: fixed;
+    background: none;
+  }
+  .afterland__cardHeading::after {
+    left: 75%;
+    right: 50px;
+  }
+  .afterland__cardHeading::before {
+    left: 50px;
+    right: 75%;
+  }
+  .afterland__headingName {
+    font-size: 43px;
+    letter-spacing: 10px;
+  }
   .afterland__list {
     display: block;
     position: unset;
     padding: 10px 0;
     top: 80px;
-  }
-  .afterland__item a {
-    font-size: 10px;
+    background: none;
   }
   .afterland__menu {
     text-align: right;
@@ -194,24 +478,30 @@ ol {
   }
   .afterland__bannerBox {
     width: 80%;
-    padding: 30px 0;
   }
   .afterland__banner--galaxy {
     height: 80%;
   }
+  .afterland__caption {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
   .afterland__caption--force {
-    width: 80%;
+    width: 60%;
   }
   .afterland__caption--play {
     width: 50%;
   }
-  .afterland__knowBtn {
-    padding: 10px 30px;
-    font-size: 13px;
-    margin: 10px 0 0;
-  }
   .afterland__logo img {
     width: unset;
+  }
+  .afterland__footerSection {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .afterland__caption--force {
+    width: 80%;
   }
 }
 

@@ -7,9 +7,22 @@
 }
 
 @font-face {
-  font-family: "SerifGothicStd";
+  font-family: 'ITC Serif Gothic Light';
   font-style: normal;
-  font-weight: 700;
-  src: local("SerifGothicStd-Bold"),
-    url("../fonts/SerifGothicStd-Bold.otf") format("otf");
-}
+  font-weight: normal;
+  src: local('ITC Serif Gothic Light'), url('../fonts/ITCSerifGothic/itc-serif-gothic-light.woff') format('woff');
+  }
+
+  @font-face {
+  font-family: 'ITC Serif Gothic Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ITC Serif Gothic Regular'), url('../fonts/ITCSerifGothic/itc-serif-gothic-regular.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'ITC Serif Gothic Extra Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ITC Serif Gothic Extra Bold'), url('../fonts/ITCSerifGothic/itc-serif-gothic-extra-bold.woff') format('woff');
+  }

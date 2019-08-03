@@ -1,15 +1,17 @@
 @import 'reset';
 @import 'variables';
+@import 'mixins';
 
 .afterland {
 
   /*header*/
   &__navbar {
     width: 100%;
-    position: fixed;
+    position: relative;
     padding: 10px 0;
     background-color: transparent;
     z-index: 99;
+    background: $back-black;
   }
 
   &__navbox {
@@ -23,7 +25,7 @@
     padding: 0 10px;
 
     img {
-      width: 60%;
+      width: 70%;
     }
   }
 
@@ -40,7 +42,7 @@
     padding: 0 5px;
 
     a {
-      font-family: $serif-font;
+      font-family: $serif-regular;
       color: $base-white;
       text-decoration: none;
       text-transform: uppercase;
@@ -59,12 +61,14 @@
   &__list {
     position: absolute;
     text-align: right;
-    top: 50px;
+    top: 60px;
     width: 100%;
     left: 0;
     display: grid;
     padding: 10px 30px;
     z-index: 9999;
+    background: rgba(23, 22, 24, .7);
+    transition: all 3s ease-in;
   }
 
   &__responsive {
@@ -126,7 +130,6 @@
     top: 0;
     display: flex;
     height: 100%;
-    padding: 50px 0 0;
   }
 
   &__caption {
@@ -166,39 +169,251 @@
   }
 
   &__knowBtn {
-    -webkit-clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
-    clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
-    padding: 5px 10px;
-    background: $base-red;
-    color: $base-white;
-    border: 0;
-    text-align: center;
-    line-height: 1;
-    font-family: $main-font;
-    font-weight: bold;
-    font-size: 7px;
-    text-transform: uppercase;
-    margin: 5px 0 0;
+    @include mainBtn;
+  }
 
-    &:hover {
-      background: rgba($base-red, 0.8);
-      opacity: 0.9;
-    }
+  /* training */
+  &__training {
+    width: 100%;
+    padding: 40px 0;
+    background: $back-black;
+    display: flex;
+    align-items: center;
+  }
+
+  &__card {
+    background: $card-black;
+    font-family: $main-font;
+    color: $base-white;
+    max-width: 300px;
+    margin: 50px auto 0;
+  }
+
+  &__cardImage {
+    width: 100%;
+  }
+
+  &__cardInfo {
+    padding: 20px;
+    min-height: 100px;
+  }
+
+  &__cardTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__cardText {
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  &__cardHeading {
+    @include mainTitle;
+  }
+
+  &__headingName {
+    font-family: $serif-bold;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: $base-white;
+    position: relative;
+
+  }
+
+  &__cardBottom {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  &__cardButton {
+    @include mainBtn;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  &__tagWrap {
+    filter: drop-shadow(0px 0px 16px rgba(255, 12, 87, .6));
   }
 
   /* media */
+
+  &__mediaBox {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  &__mediaVideo {
+    width: 100%;
+  }
+
+  /* footer */
+  &__footer {
+    background: linear-gradient(to bottom right, $back-black, $base-darkBlue);
+  }
+
+  &__footerSection {
+    color: $base-white;
+    margin-bottom: 50px;
+
+    &--schedule {
+      padding: 0 0 0 10px;
+    }
+  }
+
+  &__footerBox {
+    padding: 50px 0 20px;
+  }
+
+  &__footerForm {
+    font-family: $main-font;
+  }
+
+  &__footerInput {
+    width: 100%;
+    font-size: 13px;
+    border: none;
+    background: $base-form;
+    color: $base-white;
+    padding: 10px 16px;
+    margin: 5px 0;
+    font-weight: 300;
+
+    &:focus {
+      outline: none;
+      background: rgba($base-form, .8);
+      transition: all 0.3s ease-in;
+    }
+
+    &::placeholder {
+      color: $base-white;
+      opacity: .8;
+    }
+  }
+
+  &__footerTitle {
+    font-size: 32px;
+    font-family: $serif-bold;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+    &--media {
+      letter-spacing: 7px;
+    }
+  }
+
+  &__footerBtn {
+    @include mainBtn;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  &__footerInfo {
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-size: 12px;
+    margin: 20px 0 0;
+
+    &--box {
+      padding: 10px 20px 10px 0;
+    }
+
+    &--boxDates {
+      margin-top: 30px;
+      width: fit-content;
+    }
+
+    &--text {
+      opacity: .8;
+      line-height: 1;
+      margin: 0;
+    }
+
+    &--location {
+      margin: 0 0 5px 0;
+    }
+
+    &--phone {
+      position: relative;
+      top: 2px;
+      opacity: .8;
+    }
+
+    &--location {
+      opacity: .8;
+    }
+
+    &--link {
+      color: $base-white;
+
+      &:hover {
+        color: rgba($base-white, .8);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__footerHeading {
+    padding-top: 40px;
+  }
+
+  &__footerSocial {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 0 0;
+    margin-bottom: 50px;
+  }
+
+  &__footerIcon {
+    i {
+      color: rgba($base-white, .8);
+      font-size: 28px;
+
+      &:hover {
+        color: rgba($base-red, .8);
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+
+  /* resize */
   @media (min-width: 768px) {
+    &__navbar {
+      position: fixed;
+      background: none;
+    }
+
+    &__cardHeading {
+      &::after {
+        left: 75%;
+        right: 50px;
+      }
+
+      &::before {
+        left: 50px;
+        right: 75%;
+      }
+    }
+
+    &__headingName {
+      font-size: 43px;
+      letter-spacing: 10px;
+    }
+
     &__list {
       display: block;
       position: unset;
       padding: 10px 0;
       top: 80px;
-    }
-
-    &__item {
-      a {
-        font-size: 10px;
-      }
+      background: none;
     }
 
     &__menu {
@@ -215,7 +430,6 @@
 
     &__bannerBox {
       width: 80%;
-      padding: 30px 0;
     }
 
     &__banner {
@@ -225,8 +439,11 @@
     }
 
     &__caption {
+      margin-right: 0;
+      margin-bottom: 0;
+
       &--force {
-        width: 80%;
+        width: 60%;
       }
 
       &--play {
@@ -234,15 +451,21 @@
       }
     }
 
-    &__knowBtn {
-      padding: 10px 30px;
-      font-size: 13px;
-      margin: 10px 0 0;
-    }
-
     &__logo {
       img {
         width: unset;
+      }
+    }
+
+    &__footerSection {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__caption {
+      &--force {
+        width: 80%;
       }
     }
   }

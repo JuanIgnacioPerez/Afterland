@@ -1,0 +1,59 @@
+@mixin mainBtn {
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  padding: 5px 10px;
+  background: $base-red;
+  color: $base-white;
+  border: 0;
+  text-align: center;
+  line-height: 1;
+  font-family: $main-font;
+  font-weight: bold;
+  font-size: 7px;
+  text-transform: uppercase;
+  margin: 5px 0 0;
+
+  &:hover {
+    background: rgba($base-red, 0.8);
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: 768px) {
+    padding: 10px 30px;
+    font-size: 13px;
+    margin: 10px 0 0;
+  }
+}
+
+@mixin mainTitle {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 80%;
+    height: 50%;
+    border-top: 1px solid $base-red;
+    z-index: 20;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    right: 20px;
+    height: 50%;
+    border-top: 1px solid $base-red;
+    z-index: 20;
+  }
+}
