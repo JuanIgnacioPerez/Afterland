@@ -1,0 +1,180 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+.afterland {
+  /* banner */
+
+  &__historyBox {
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__historyTitle {
+    font-family: $serif-bold;
+    color: $base-white;
+    font-size: 30px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+  }
+
+  /* inicios */
+  &__iniciosImage {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__iniciosHistory {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--inicio {
+      background: $base-black;
+    }
+
+    &--next {
+      background: $back-black;
+      padding-top: 30px;
+    }
+  }
+
+  &__iniciosTitle {
+    font-family: $serif-bold;
+    padding: 40px 0 0 40px;
+    color: $base-white;
+    font-size: 32px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+
+  &__iniciosText {
+    padding: 20px 0 40px 40px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $main-font;
+    color: $base-white;
+    width: 90%;
+    line-height: 1.2;
+  }
+
+  &__line {
+    @include mainLine;
+  }
+
+  /* heroes */
+  &__heroesHeading {
+    @include mainTitle;
+  }
+
+  &__heroes {
+    width: 100%;
+    padding: 40px 0;
+    background: $back-black;
+    display: flex;
+    align-items: center;
+  }
+
+  &__heroesWrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__heroesBox {
+    margin: 0 auto;
+  }
+
+  &__heroesSquare {
+    margin: 30px auto 0;
+  }
+
+  &__heroesImageBox {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__heroesImage {
+    width: 100%;
+  }
+
+  &__heroesInfo {
+    text-align: center;
+    padding: 20px;
+  }
+
+  &__heroesTitle {
+    font-family: $serif-bold;
+    color: $base-white;
+    font-size: 30px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: rgba($base-red, .2);
+    transition: .5s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+
+    &>h3 {
+      font-size: 18px;
+      color: $base-white;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: .9;
+      letter-spacing: 6px;
+    }
+  }
+
+  &__overlay:hover {
+    opacity: 1
+  }
+
+  /* resize */
+  @media (min-width: 768px) {
+    &__heroesTitle {
+      font-size: 43px;
+      letter-spacing: 8px;
+    }
+
+    &__overlay {
+      &>h3 {
+        font-size: 30px;
+      }
+    }
+
+    &__historyTitle {
+      font-size: 43px;
+      letter-spacing: 10px;
+    }
+
+    &__iniciosText {
+      width: 80%;
+    }
+  }
+}

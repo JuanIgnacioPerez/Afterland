@@ -1,6 +1,9 @@
 @import 'reset';
 @import 'variables';
 @import 'mixins';
+@import './history.scss';
+@import './locations.scss';
+@import './services.scss';
 
 .afterland {
 
@@ -68,7 +71,7 @@
     padding: 10px 30px;
     z-index: 9999;
     background: rgba(23, 22, 24, .7);
-    transition: all 3s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   &__responsive {
@@ -119,7 +122,7 @@
     background-position: center center;
     position: relative;
 
-    &--galaxy {
+    &--header {
       width: 100%;
       height: 100%;
     }
@@ -130,15 +133,15 @@
     top: 0;
     display: flex;
     height: 100%;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
   }
 
   &__caption {
     display: inline-flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin-right: 20px;
-    margin-bottom: 10px;
 
     &--force {
       width: 50%;
@@ -195,18 +198,19 @@
 
   &__cardInfo {
     padding: 20px;
-    min-height: 100px;
+    min-height: 160px;
+    line-height: 0.8;
   }
 
   &__cardTitle {
     font-size: 14px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 3px;
     text-transform: uppercase;
   }
 
   &__cardText {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 300;
   }
 
@@ -222,7 +226,6 @@
     font-weight: 700;
     color: $base-white;
     position: relative;
-
   }
 
   &__cardBottom {
@@ -249,10 +252,24 @@
     background-size: cover;
     background-position: center center;
     position: relative;
+    padding-bottom: 20px;
+    background: $back-black;
   }
 
-  &__mediaVideo {
+  &__videoResponsive {
+    position: relative;
+    min-height: 798px;
+    overflow: hidden;
+  }
+
+  &__videoResponsive iframe,
+  &__videoResponsive object,
+  &__videoResponsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
   }
 
   /* footer */
@@ -387,7 +404,7 @@
   /* resize */
   @media (min-width: 768px) {
     &__navbar {
-      position: fixed;
+      position: absolute;
       background: none;
     }
 
@@ -401,6 +418,10 @@
         left: 50px;
         right: 75%;
       }
+    }
+
+    &__cardText {
+      font-size: 12px;
     }
 
     &__headingName {
@@ -428,16 +449,6 @@
       display: none;
     }
 
-    &__bannerBox {
-      width: 80%;
-    }
-
-    &__banner {
-      &--galaxy {
-        height: 80%;
-      }
-    }
-
     &__caption {
       margin-right: 0;
       margin-bottom: 0;
@@ -459,14 +470,6 @@
 
     &__footerSection {
       margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    &__caption {
-      &--force {
-        width: 80%;
-      }
     }
   }
 

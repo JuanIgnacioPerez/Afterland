@@ -1,0 +1,74 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+.afterland {
+
+  /* locations */
+  &__locations {
+    width: 100%;
+    padding: 40px 0;
+    background: $back-black;
+    display: flex;
+    align-items: center;
+  }
+
+  &__locationsCard {
+    background: $card-black;
+    font-family: $main-font;
+    color: $base-white;
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
+
+  &__locationsImage {
+    width: 100%;
+  }
+
+  &__locationsInfo {
+    padding: 20px;
+    line-height: 0.8;
+    min-height: 111px;
+  }
+
+  &__locationsTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 3px;
+    text-transform: uppercase;
+  }
+
+  &__locationsButton {
+    @include mainBtn;
+    padding: 8px 16px !important;
+    font-size: 10px !important;
+  }
+
+  &__locationsBottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__tagWrap {
+    filter: drop-shadow(0px 0px 16px rgba(255, 12, 87, .6));
+  }
+
+  &__locationsImageBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__locationsLogo {
+    position: absolute;
+  }
+
+}

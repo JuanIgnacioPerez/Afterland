@@ -1,7 +1,29 @@
+@import 'variables';
+
 html,
 body,
 ul,
 ol {
   margin:  0;
   padding: 0;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.full-height {
+  background: $back-black;
+}
+
+body {
+  background: $base-black;
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin: 0 12px 12px;
 }
