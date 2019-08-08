@@ -210,6 +210,9 @@ body {
   width: 90%;
   line-height: 1.2;
 }
+.afterland__iniciosText p {
+  margin-bottom: 10px;
+}
 .afterland__line {
   width: 130px;
   height: 1px;
@@ -606,7 +609,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0 40px 20px;
+  padding: 0 40px 30px;
   position: relative;
 }
 .afterland__eventsInput {
@@ -681,9 +684,12 @@ body {
   background-position: center center;
   position: relative;
 }
+.afterland__birthday {
+  overflow-x: hidden;
+}
 .afterland__fiestaTitle {
-  font-size: 43px;
-  letter-spacing: 10px;
+  font-size: 30px;
+  letter-spacing: 8px;
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
@@ -714,6 +720,10 @@ body {
 @media (min-width: 768px) {
   .afterland__eventsDescription {
     padding: 20px 0;
+  }
+  .afterland__fiestaTitle {
+    font-size: 43px;
+    letter-spacing: 10px;
   }
 }
 

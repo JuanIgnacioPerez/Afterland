@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 0 40px 20px;
+    padding: 0 40px 30px;
     position: relative;
   }
 
@@ -89,9 +89,13 @@
     position: relative;
   }
 
+  &__birthday {
+    overflow-x: hidden;
+  }
+
   &__fiestaTitle {
-    font-size: 43px;
-    letter-spacing: 10px;
+    font-size: 30px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     font-weight: 700;
     color: #ffffff;
@@ -128,6 +132,10 @@
   @media (min-width: 768px) {
     &__eventsDescription {
       padding: 20px 0;
+    }
+    &__fiestaTitle {
+      font-size: 43px;
+      letter-spacing: 10px;
     }
   }
 

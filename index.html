@@ -43,6 +43,9 @@
               <div class="afterland__menu" id="navbarResponsive">
                 <ul class="afterland__list">
                   <li class="afterland__item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="afterland__item">
                     <a href="./pages/history.html">Historia</a>
                   </li>
                   <li class="afterland__item">
@@ -53,11 +56,9 @@
                   <li class="afterland__item">
                     <a href="./pages/services.html">Servicios</a>
                   </li>
+
                   <li class="afterland__item">
-                    <a href="#">Seguridad</a>
-                  </li>
-                  <li class="afterland__item">
-                    <a href="#">contáctanos</a>
+                    <a href="#contacto">contáctanos</a>
                   </li>
                 </ul>
               </div>
@@ -203,7 +204,7 @@
               <div class="col-12">
                 <div class="afterland__cardBottom">
                   <span class="afterland__tagWrap">
-                    <a href="./pages/locations.html" target="self">
+                    <a href="./pages/locations.html">
                       <button class="afterland__cardButton">
                         Ver Todos
                       </button>
@@ -234,7 +235,7 @@
 
       <!-- Footer -->
       <footer>
-        <div class="afterland__footer">
+        <div class="afterland__footer" id="contacto">
           <div class="container">
             <div class="afterland__footerBox">
               <div class="row">
@@ -244,20 +245,24 @@
                       <h3 class="afterland__footerTitle">Contacto</h3>
                     </div>
                     <div class="afterland__footerForm">
-                      <form action="" method="get">
+                      
+                      <form action="enviar.php" method="POST">
                         <input
+                          name="nombre"
                           class="afterland__footerInput"
                           type="text"
                           placeholder="Your Name"
                           required
                         />
                         <input
+                          name="email"
                           class="afterland__footerInput"
                           type="email"
                           placeholder="Email Address"
                           required
                         />
                         <textarea
+                          name="mensaje"
                           class="afterland__footerInput"
                           rows="4"
                           placeholder="Your Message..."
@@ -265,7 +270,7 @@
                         ></textarea>
 
                         <span class="afterland__tagWrap">
-                          <button class="afterland__footerBtn">
+                          <button type="submit" class="afterland__footerBtn">
                             Send
                           </button>
                         </span>
@@ -295,7 +300,11 @@
                       <div
                         class="afterland__footerInfo--box afterland__footerInfo--boxDates"
                       >
-                        <a href="#" class="afterland__footerInfo--link">
+                        <a
+                          href="../politicaDatos.pdf"
+                          class="afterland__footerInfo--link"
+                          download
+                        >
                           <p class="afterland__footerInfo--text">
                             política de tratamiento de datos
                           </p>

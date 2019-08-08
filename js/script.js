@@ -1,1 +1,1 @@
-console.log('%c Rock & Roll! ', 'background: #222; color: #bada55; font-size: 26px');
+console.log('%c Afterland Web Site! ', 'background: #111111; color: #ff0c57; font-size: 20px');

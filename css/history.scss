@@ -68,6 +68,9 @@
     color: $base-white;
     width: 90%;
     line-height: 1.2;
+    p {
+      margin-bottom: 10px;
+    }
   }
 
   &__line {
