@@ -198,8 +198,8 @@
 
   &__cardInfo {
     padding: 20px;
-    min-height: 160px;
-    line-height: 0.8;
+    min-height: 170px;
+    line-height: 1;
   }
 
   &__cardTitle {
@@ -247,29 +247,14 @@
 
   /* media */
 
-  &__mediaBox {
-    background-repeat: no-repeat;
+  &__video {
+    width: 100%;
+    height: auto;
     background-size: cover;
     background-position: center center;
     position: relative;
-    padding-bottom: 20px;
-    background: $back-black;
-  }
-
-  &__videoResponsive {
-    position: relative;
-    min-height: 798px;
-    overflow: hidden;
-  }
-
-  &__videoResponsive iframe,
-  &__videoResponsive object,
-  &__videoResponsive embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    padding: 20px 0;
+    cursor: pointer;
   }
 
   /* footer */

@@ -112,13 +112,15 @@
                     </div>
                   </div>
                   <div class="col-6">
-                    <div class="afterland__infoPlay">
-                      <img
-                        class="afterland__caption--play"
-                        src="./img/play.png"
-                        alt="play"
-                      />
-                    </div>
+                    <a href="#videomix">
+                      <div class="afterland__infoPlay">
+                        <img
+                          class="afterland__caption--play"
+                          src="./img/play.png"
+                          alt="play"
+                        />
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -172,7 +174,10 @@
               </div>
               <div class="col-xs-12 col-sm-6 col-lg-3">
                 <div class="afterland__card">
-                  <img class="afterland__cardImage" src="img/cableAventura.png" />
+                  <img
+                    class="afterland__cardImage"
+                    src="img/cableAventura.png"
+                  />
                   <div class="afterland__cardInfo">
                     <h6 class="afterland__cardTitle">
                       Multiaventura
@@ -189,7 +194,10 @@
               </div>
               <div class="col-xs-12 col-sm-6 col-lg-3">
                 <div class="afterland__card">
-                  <img class="afterland__cardImage" src="img/bumperSoccer.png" />
+                  <img
+                    class="afterland__cardImage"
+                    src="img/bumperSoccer.png"
+                  />
                   <div class="afterland__cardInfo">
                     <h6 class="afterland__cardTitle">Bumper Soccer</h6>
                     <span class="afterland__cardText"
@@ -219,17 +227,11 @@
       <!-- End Training -->
 
       <!-- Media -->
-      <section class="afterland__media">
-        <div class="afterland__mediaBox">
-          <div class="afterland__videoResponsive">
-            <iframe
-              src="https://www.youtube.com/embed/5DxHBN-8eUI"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
+      <section class="afterland__videoBox" id="videomix">
+        <video class="afterland__video" controls>
+          <source src="./img/videos/afterlandsimulador.mp4" type="video/mp4" />
+          <p>This browser does not support the video element.</p>
+        </video>
       </section>
       <!-- End Media -->
 
@@ -245,7 +247,6 @@
                       <h3 class="afterland__footerTitle">Contacto</h3>
                     </div>
                     <div class="afterland__footerForm">
-                      
                       <form action="enviar.php" method="POST">
                         <input
                           name="nombre"
